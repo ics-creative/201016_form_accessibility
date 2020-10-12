@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>フォームにおけるアクセシビリティ</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 id="formTitle" class="formTitle">お問い合わせフォーム</h1>
+      <form aria-labelledby="formTitle">
+        <div class="formWrapper">
+          <p>
+            <label for="name" class="labelName">お名前 *</label>
+            <input
+              type="text"
+              id="name"
+              class="input"
+              required
+              aria-required="true"
+            />
+            <span aria-live="polite" role="status">
+              <span class="errorMessage messageBox" aria-hidden="true"
+                >必須項目です</span
+              >
+              <span class="OKMessage messageBox" aria-hidden="true"
+                >OKです！</span
+              >
+            </span>
+          </p>
+          <p>
+            <label for="email" class="labelName">メールアドレス *</label>
+            <input
+              type="email"
+              id="email"
+              class="input"
+              required
+              aria-required="true"
+            />
+
+            <span aria-live="polite" role="status">
+              <span class="errorMessage messageBox" aria-hidden="true"
+                >正しい形式で入力してください</span
+              >
+              <span class="OKMessage messageBox" aria-hidden="true"
+                >OKです！</span
+              >
+            </span>
+          </p>
+          <p>
+            <label for="password" class="labelName">パスワード*</label>
+            <input
+              type="Password"
+              id="password"
+              class="input"
+              required
+              aria-required="true"
+              pattern="^[0-9A-Za-z]+$"
+              minlength="6"
+              maxlength="18"
+              aria-describedby="passwordType"
+            />
+
+            <span id="passwordType" class="describe"
+              >（半角英数6文字以上18文字以下）</span
+            >
+            <span aria-live="polite" role="status">
+              <span class="errorMessage messageBox" aria-hidden="true"
+                >正しい形式で入力してください</span
+              >
+              <span class="OKMessage messageBox" aria-hidden="true"
+                >OKです！</span
+              >
+            </span>
+          </p>
+          <p>
+            <label for="detail" class="labelName">お問い合わせ内容 *</label>
+            <textarea
+              name="detail"
+              id="detail"
+              cols="30"
+              rows="10"
+              required
+              aria-required="true"
+            ></textarea>
+
+            <span aria-live="polite" role="status">
+              <span class="errorMessage messageBox" aria-hidden="true"
+                >必須項目です</span
+              >
+              <span class="OKMessage messageBox" aria-hidden="true"
+                >OKです！</span
+              >
+            </span>
+          </p>
+        </div>
+        <p id="required" class="required">
+          * は必須事項
+          <span id="formValidate" class="formValidate" aria-live="polite">
+            <span class="errorMessage messageBox" aria-hidden="true"
+              >必須事項に未記入のものがあるか、正しい形式で入力されていないものがあります</span
+            >
+            <span class="OKMessage messageBox" aria-hidden="true"
+              >入力内容に誤りがなければ送信ボタンを押してください</span
+            >
+          </span>
+        </p>
+        <button id="submit" class="submitButton" aria-disabled="true">
+          送信
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "Accessibility_about_form",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "sass": "sass --watch style.scss style.css"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "2.1.2",
+    "sass": "1.26.3"
+  }
+}
