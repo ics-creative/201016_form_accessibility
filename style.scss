@@ -73,7 +73,8 @@ textarea {
 
 .formValidate {
   position: relative;
-  height: 40px;
+  margin-top: 12px;
+  height: 1em;
   .messageBox {
     top: 0;
   }
@@ -100,4 +101,10 @@ textarea {
       opacity: 0.8;
     }
   }
+}
+
+.notSend{
+  margin-top: 24px;
+  margin-bottom: 0;
+  font-size: 14px;
 }

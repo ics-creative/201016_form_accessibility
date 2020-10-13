@@ -74,7 +74,8 @@ textarea {
 
 .formValidate {
   position: relative;
-  height: 40px;
+  margin-top: 12px;
+  height: 1em;
 }
 .formValidate .messageBox {
   top: 0;
@@ -99,6 +100,12 @@ textarea {
 }
 .submitButton:not([aria-disabled=false]):hover {
   opacity: 0.8;
+}
+
+.notSend {
+  margin-top: 24px;
+  margin-bottom: 0;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */

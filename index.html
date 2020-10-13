@@ -13,14 +13,17 @@
       <form aria-labelledby="formTitle">
         <div class="formWrapper">
           <p>
-            <label for="name" class="labelName">お名前 *</label>
-            <input
-              type="text"
-              id="name"
-              class="input"
-              required
-              aria-required="true"
-            />
+            <label class="labelName"
+              >お名前 （必須）
+              <input
+                type="text"
+                id="name"
+                class="input"
+                required
+                aria-required="true"
+                autocomplete="name"
+              />
+            </label>
             <span aria-live="polite" role="status">
               <span class="errorMessage messageBox" aria-hidden="true"
                 >必須項目です</span
@@ -31,13 +34,14 @@
             </span>
           </p>
           <p>
-            <label for="email" class="labelName">メールアドレス *</label>
+            <label for="email" class="labelName">メールアドレス （必須）</label>
             <input
               type="email"
               id="email"
               class="input"
               required
               aria-required="true"
+              autocomplete="email"
             />
 
             <span aria-live="polite" role="status">
@@ -50,7 +54,7 @@
             </span>
           </p>
           <p>
-            <label for="password" class="labelName">パスワード*</label>
+            <label for="password" class="labelName">パスワード （必須）</label>
             <input
               type="Password"
               id="password"
@@ -61,6 +65,7 @@
               minlength="6"
               maxlength="18"
               aria-describedby="passwordType"
+              autocomplete="current-password"
             />
 
             <span id="passwordType" class="describe"
@@ -76,7 +81,7 @@
             </span>
           </p>
           <p>
-            <label for="detail" class="labelName">お問い合わせ内容 *</label>
+            <label for="detail" class="labelName">お問い合わせ内容 （必須）</label>
             <textarea
               name="detail"
               id="detail"
@@ -96,8 +101,7 @@
             </span>
           </p>
         </div>
-        <p id="required" class="required">
-          * は必須事項
+        <p>
           <span id="formValidate" class="formValidate" aria-live="polite">
             <span class="errorMessage messageBox" aria-hidden="true"
               >必須事項に未記入のものがあるか、正しい形式で入力されていないものがあります</span
@@ -107,10 +111,16 @@
             >
           </span>
         </p>
-        <button id="submit" class="submitButton" aria-disabled="true">
+        <button
+          id="submit"
+          type="submit"
+          class="submitButton"
+          aria-disabled="true"
+        >
           送信
         </button>
       </form>
+      <p class="notSend">※入力された内容はどこにも送信されません</p>
     </div>
   </body>
 </html>
