@@ -67,9 +67,6 @@ const changeAriaHidden = (event) => {
   }
 };
 
-// 初期読み込み時に実行
-validateButton();
-
 // フォームに入力されたら、各種関数を実行
 document.querySelectorAll("input,textarea").forEach((element) => {
   // 入力中はステータスメッセージを非表示に
