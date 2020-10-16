@@ -47,10 +47,12 @@ const hideStatus = (event) => {
  * @param event
  */
 const changeAriaHidden = (event) => {
+
   const inputElement = event.target;
   const liveRegionElement = inputElement.parentNode.querySelector(
     "span[role='status']"
   );
+  console.log(inputElement.validity.valid)
   if (liveRegionElement == null) {
     return;
   }

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>フォームにおけるアクセシビリティ</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
@@ -13,17 +13,16 @@
       <form aria-labelledby="formTitle">
         <div class="formWrapper">
           <p>
-            <label class="labelName"
-              >お名前 （必須）
-              <input
-                type="text"
-                id="name"
-                class="input"
-                required
-                aria-required="true"
-                autocomplete="name"
-              />
-            </label>
+            <label class="labelName">お名前 （必須）</label>
+            <input
+              type="text"
+              id="name"
+              class="input"
+              required
+              aria-required="true"
+              autocomplete="name"
+            />
+
             <span aria-live="polite" role="status">
               <span class="errorMessage messageBox" aria-hidden="true"
                 >必須項目です</span
@@ -81,7 +80,9 @@
             </span>
           </p>
           <p>
-            <label for="detail" class="labelName">お問い合わせ内容 （必須）</label>
+            <label for="detail" class="labelName"
+              >お問い合わせ内容 （必須）</label
+            >
             <textarea
               name="detail"
               id="detail"
