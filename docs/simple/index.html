@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>フォームにおけるアクセシビリティ</title>
+    <link rel="stylesheet" href="../style.css" />
+<!--    <script src="../script.js" defer></script>-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 id="formTitle" class="formTitle">お問い合わせフォーム</h1>
+      <form aria-labelledby="formTitle">
+        <div class="formWrapper">
+          <p>
+            <label class="labelName">お名前 （必須）</label>
+            <input
+              type="text"
+              id="name"
+              class="input"
+              required
+              aria-required="true"
+              autocomplete="name"
+            />
+          </p>
+          <p>
+            <label for="email" class="labelName">メールアドレス （必須）</label>
+            <input
+              type="email"
+              id="email"
+              class="input"
+              required
+              aria-required="true"
+              autocomplete="email"
+            />
+          </p>
+          <p>
+            <label for="password" class="labelName">パスワード （必須）</label>
+            <input
+              type="Password"
+              id="password"
+              class="input"
+              required
+              aria-required="true"
+              pattern="^[0-9A-Za-z]+$"
+              minlength="6"
+              maxlength="18"
+              aria-describedby="passwordType"
+              autocomplete="current-password"
+            />
+
+            <span id="passwordType" class="describe"
+              >（半角英数6文字以上18文字以下）</span
+            >
+          </p>
+          <p>
+            <label for="detail" class="labelName"
+              >お問い合わせ内容 （必須）</label
+            >
+            <textarea
+              name="detail"
+              id="detail"
+              cols="30"
+              rows="10"
+              required
+              aria-required="true"
+            ></textarea>
+          </p>
+        </div>
+        <button
+          id="submit"
+          type="submit"
+          class="submitButton"
+        >
+          送信
+        </button>
+      </form>
+      <p class="notSend">※入力された内容はどこにも送信されません</p>
+    </div>
+  </body>
+</html>

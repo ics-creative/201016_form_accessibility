@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.2rem;
+  position: relative;
+}
+
+.formTitle {
+  margin-bottom: 2rem;
+}
+
+.labelName {
+  display: block;
+}
+
+.describe {
+  margin: 8px 0 0;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  padding: 8px;
+  border-bottom: 1px solid #333333;
+}
+input:invalid,
+textarea:invalid {
+  box-shadow: none;
+}
+
+input {
+  background-color: #f9f9f9;
+}
+
+textarea {
+  margin-top: 4px;
+  border: 1px solid #333333;
+}
+
+.messageBox {
+  padding: 0 8px 8px 8px;
+  position: absolute;
+  bottom: -36px;
+  z-index: -1;
+  font-size: 0.9rem;
+}
+.messageBox.errorMessage {
+  color: red;
+}
+.messageBox.OKMessage {
+  color: green;
+}
+.messageBox[aria-hidden=true] {
+  display: none;
+}
+
+.formValidate {
+  position: relative;
+  margin-top: 12px;
+  height: 1em;
+}
+.formValidate .messageBox {
+  top: 0;
+}
+
+.submitButton {
+  display: block;
+  width: 120px;
+  height: 40px;
+  border: none;
+  background-color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.submitButton[aria-disabled=true] {
+  background-color: #999;
+  color: #ddd;
+  pointer-events: none;
+}
+.submitButton:not([aria-disabled=false]):hover {
+  opacity: 0.8;
+}
+
+.notSend {
+  margin-top: 24px;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=style.css.map */
