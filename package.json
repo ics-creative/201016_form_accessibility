@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "sass": "sass --watch docs/style.scss style.css"
+    "sass": "sass --watch docs/style.scss docs/style.css"
   },
   "dependencies": {},
   "devDependencies": {
